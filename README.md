@@ -3,7 +3,7 @@
 
 **Dowload the pretrained model at https://drive.google.com/file/d/15rJip2UT_fRoXl-P9J1_5ZVR9W7vBa6Z/view?usp=sharing**
 
-# Required library:
+# Required library
 1. Pytorch with cuda (>2.0): https://pytorch.org/
 2. OpenCV-Python (>3.0): https://github.com/opencv/opencv-python
 3. Pytorch Image Models: https://github.com/huggingface/pytorch-image-models
