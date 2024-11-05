@@ -10,6 +10,7 @@
 4. Python Imaging Library: https://github.com/python-pillow/Pillow
 5. Progress Bar for Python: https://github.com/tqdm/tqdm
 6. Scikit-learn: https://scikit-learn.org/stable/install.html#installation-instructions
+7. Pandas: https://github.com/pandas-dev/pandas
 
 # Test pretrained GardnerNet
 Use **_Test_GardnerNet.py_** to test pretrained GardnerNet on example images of blastocysts in Figures 1, 3, and 4 in the manuscript.
