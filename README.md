@@ -1,5 +1,5 @@
 # GardnerNet
-**Source code for our manuscript entitled _' How to select among blastocysts with similar or the same inner cell mass and trophectoderm grades?'_**
+**Source code for our manuscript entitled _'How to select among blastocysts with similar or the same inner cell mass and trophectoderm grades?'_**
 
 **Dowload the pretrained model at https://drive.google.com/file/d/15rJip2UT_fRoXl-P9J1_5ZVR9W7vBa6Z/view?usp=sharing**
 
