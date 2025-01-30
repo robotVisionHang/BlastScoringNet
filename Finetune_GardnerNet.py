@@ -544,7 +544,7 @@ print( 'dataset mean: {}, stdev: {}'.format(dataset_mean, dataset_std) )
 # %%
 # pretrained model
 
-pretrained_pt = torch.load( './GardnerNet_Pretrained_1.pt', map_location= device )
+pretrained_pt = torch.load( './BlastScoringNet_Pretrained_1.pt', map_location= device )
 
 pretrained_model = GardnerNet(num_of_multifocus_images= 2, num_expansion_classes= 4)
 

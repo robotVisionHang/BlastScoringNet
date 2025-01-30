@@ -63,7 +63,7 @@ class GardnerNet(nn.Module):
 
 # %%
 # Load model
-model_path = './GardnerNet_Pretrained_1.pt'
+model_path = './BlastScoringNet_Pretrained_1.pt'
 saved_model = torch.load( model_path, map_location= device )
 
 # %%
