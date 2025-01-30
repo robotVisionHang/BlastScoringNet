@@ -1,4 +1,4 @@
-# GardnerNet
+# BlastScoringNet
 **Source code for our manuscript entitled _'How to select among blastocysts with similar or the same inner cell mass and trophectoderm grades?'_**
 
 **Dowload the pretrained model at https://drive.google.com/file/d/15rJip2UT_fRoXl-P9J1_5ZVR9W7vBa6Z/view?usp=sharing**
@@ -12,13 +12,13 @@
 6. Scikit-learn: https://scikit-learn.org/stable/install.html#installation-instructions
 7. Pandas: https://github.com/pandas-dev/pandas
 
-# Test pretrained GardnerNet
-Use **_Test_GardnerNet.py_** to test pretrained GardnerNet on example images of blastocysts in Figures 1, 3, and 4 in the manuscript.
+# Test pretrained BlastScoringNet
+Use **_Test.py_** to test pretrained BlastScoringNet on example images of blastocysts in Figures 1, 3, and 4 in the manuscript.
 
 
-# Fine-tune GardnerNet on your own dataset
-Use **_Finetune_GardnerNet.py_** to fine-tune GradnerNet on your own dataset.
-1. Download pretrained GardnerNet model from https://drive.google.com/file/d/15rJip2UT_fRoXl-P9J1_5ZVR9W7vBa6Z/view?usp=sharing
+# Fine-tune BlastScoringNet on your own dataset
+Use **_Finetune.py_** to fine-tune GradnerNet on your own dataset.
+1. Download pretrained BlastScoringNet model from https://drive.google.com/file/d/15rJip2UT_fRoXl-P9J1_5ZVR9W7vBa6Z/view?usp=sharing
 2. Put all blastocyst images in _./fine-tune-dataset/imgs/_
 3. Creat an Excel file containg multi-focus image names and lables of expansion, ICM, and TE (see ./fine-tune-dataset/df_5_focus.xlsx).
    For example, if each blastocyst has five focal planes, the column name and order of the Excel file should be:
@@ -28,7 +28,7 @@ Use **_Finetune_GardnerNet.py_** to fine-tune GradnerNet on your own dataset.
    'Expansion' labels (descriptions): 3(full blastocyst), 4 (expanded), 5 (hatching), 6 (hatched).
 
    'ICM/TE' labels (descriptions): 1 (A, or good), 2 (B or fair), 3 (C or poor)
-4. Modify parameters such as num_expansion_classes, num_multifocus_imgs in **_Finetune_GardnerNet.py_** to adapt to your own dataset.
-5. Run **_Finetune_GardnerNet.py_**, the validation metrics (e.g., AUC, Acc, confusion matrix) will be shown after each epoch, final model
+4. Modify parameters such as num_expansion_classes, num_multifocus_imgs in **_Finetune.py_** to adapt to your own dataset.
+5. Run **_Finetune.py_**, the validation metrics (e.g., AUC, Acc, confusion matrix) will be shown after each epoch, final model
    will be saved as './fine-tune-dataset/final_model.pt'.
  
