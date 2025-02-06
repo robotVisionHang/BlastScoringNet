@@ -179,9 +179,9 @@ class BlastocystFocalDataset(Dataset):
 # # Model
 
 # %%
-class GardnerNet(nn.Module):
+class BlastScoringNet(nn.Module):
     def __init__(self, num_of_multifocus_images, num_expansion_classes):
-        super(GardnerNet, self).__init__()
+        super(BlastScoringNet, self).__init__()
 
         self.model_ft = timm.create_model( 'resnet152', pretrained= False, in_chans= 1, num_classes= 2)
         self.num_ftrs = self.model_ft.fc.in_features
@@ -432,7 +432,7 @@ def train_evaluate(hyper_parameters, df_train, df_val, df_test,
   criterion_te = torch.nn.CrossEntropyLoss(weight= te_class_weight)
 
   # untrained net
-  model = GardnerNet(num_multifocus_imgs, num_expansion_classes)
+  model = BlastScoringNet(num_multifocus_imgs, num_expansion_classes)
 
   # use pretrained encoder
   model.model_ft = copy.deepcopy(pretrained_model.model_ft)
@@ -546,7 +546,7 @@ print( 'dataset mean: {}, stdev: {}'.format(dataset_mean, dataset_std) )
 
 pretrained_pt = torch.load( './BlastScoringNet_Pretrained_1.pt', map_location= device )
 
-pretrained_model = GardnerNet(num_of_multifocus_images= 2, num_expansion_classes= 4)
+pretrained_model = BlastScoringNet(num_of_multifocus_images= 2, num_expansion_classes= 4)
 
 pretrained_model.load_state_dict( pretrained_pt )
 

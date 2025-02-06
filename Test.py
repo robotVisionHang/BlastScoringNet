@@ -32,9 +32,9 @@ print( device )
 # %%
 # Model definition
 
-class GardnerNet(nn.Module):
+class BlastScoringNet(nn.Module):
     def __init__(self, number_of_multifocus_images):
-        super(GardnerNet, self).__init__()
+        super(BlastScoringNet, self).__init__()
 
         self.model_ft = timm.create_model( 'resnet152', pretrained= False, in_chans= 1, num_classes= 2)
         self.num_ftrs = self.model_ft.fc.in_features
@@ -68,7 +68,7 @@ saved_model = torch.load( model_path, map_location= device )
 
 # %%
 number_of_multifocus_images = 2
-model = GardnerNet(number_of_multifocus_images)
+model = BlastScoringNet(number_of_multifocus_images)
 
 model.load_state_dict( saved_model )
 
