@@ -42,9 +42,9 @@ class BlastScoringNet(nn.Module):
 
         self.number_of_multifocus_images = number_of_multifocus_images
 
-        self.ds_layer = nn.Linear(self.num_ftrs*number_of_multifocus_images, 4)   # 3, 4, 5, 6
-        self.icm_layer = nn.Linear(self.num_ftrs*number_of_multifocus_images, 3)  # (1)(A)(good), (2)(B)(fair), (3)(C)(poor)
-        self.te_layer = nn.Linear(self.num_ftrs*number_of_multifocus_images, 3)   # (1)(A)(good), (2)(B)(fair), (3)(C)(poor)
+        self.ds_layer = nn.Linear(self.num_ftrs*number_of_multifocus_images, 4)   # Expansion degree: 3, 4, 5, 6
+        self.icm_layer = nn.Linear(self.num_ftrs*number_of_multifocus_images, 3)  # ICM: (1)(A)(good), (2)(B)(fair), (3)(C)(poor)
+        self.te_layer = nn.Linear(self.num_ftrs*number_of_multifocus_images, 3)   # TE:  (1)(A)(good), (2)(B)(fair), (3)(C)(poor)
 
         self.softmax_op = torch.nn.Softmax(dim=1)
 
