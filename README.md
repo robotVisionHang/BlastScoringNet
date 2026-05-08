@@ -1,7 +1,7 @@
 # BlastScoringNet
 **Source code for our paper entitled _'An interpretable artificial intelligence approach to differentiate between blastocysts with similar or same morphological grades.'_**
 
-**Dowload the pretrained model at https://drive.google.com/file/d/15rJip2UT_fRoXl-P9J1_5ZVR9W7vBa6Z/view?usp=sharing**
+**Dowload the pretrained model from https://drive.google.com/file/d/1EYIY514WKd9qHj9sqv6jWdV3PA-8DHHj/view?usp=sharing**
 
 # Required library
 1. Pytorch with cuda (>2.0): https://pytorch.org/
@@ -17,7 +17,7 @@ Use **_Test.py_** to test pretrained BlastScoringNet on example images of blasto
 
 
 # Pretrained model and hyperparameters for fine-tuning (load backbone encoder and then fine-tune all params)
-1. Download pretrained BlastScoringNet model from https://drive.google.com/file/d/15rJip2UT_fRoXl-P9J1_5ZVR9W7vBa6Z/view?usp=sharing
+1. Download pretrained BlastScoringNet model from https://drive.google.com/file/d/1EYIY514WKd9qHj9sqv6jWdV3PA-8DHHj/view?usp=sharing
 2. Pytorch AdamW hyper_parameters= {'batch_size': 9, 
              'lr': 4.73345487439063e-05, 
              'weight_decay': 0.507309243983485, 
